@@ -3,7 +3,6 @@ import { DatePicker, Button } from 'antd';
 import './index.less';
 
 const App = () => {
-    console.log('999');
     const demo = () => {
         return 1;
     };
