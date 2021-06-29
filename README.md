@@ -4,7 +4,7 @@
 
 ### 开发环境下启动.
 
-yarn start
+yarn dev
 
 ### 部署生产环境.
 
