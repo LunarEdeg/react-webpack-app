@@ -1,5 +1,6 @@
 import React from 'react';
-import './index.css';
+import { DatePicker, Button } from 'antd';
+import './index.less';
 
 const App = () => {
     console.log('999');
@@ -9,7 +10,13 @@ const App = () => {
     const a = [1, 2, 3];
     const b = [...a, 4];
 
-    return <div className='app'>App</div>;
+    return (
+        <div className='app'>
+            <DatePicker />
+            <Button>11</Button>
+            App
+        </div>
+    );
 };
 
 export default App;

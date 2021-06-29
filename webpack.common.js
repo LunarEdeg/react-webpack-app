@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const theme = require('./theme');
 
 module.exports = {
     entry: {
@@ -26,6 +27,22 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.less$/i,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'less-loader',
+                        options: {
+                            lessOptions: {
+                                modifyVars: theme,
+                                javascriptEnabled: true,
+                            },
+                        },
+                    },
+                ],
             },
         ],
     },
